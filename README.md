@@ -1,6 +1,13 @@
-# gluestack-ui Starter Kit
+# SupaGlue Starter?
 
-Welcome to the gluestack-ui Starter Kit! This project is designed to help you kickstart your application development with React and React Native. It supports both Next.js and Expo, providing a flexible and modular architecture.
+I plan to for the Gluestack starter-kit demo app, and make my own modifications. I will not be using any code from paid starters that I have bought. I will instead roll my own based on supabase and expo docs. I need
+- [ ] update this started to use latest packages including expo beta, and nativewinds 4.1+, etc
+- [ ] add supabase with web/app specific configurations, based on supabase docs and public examples
+- [ ] secure expo and nexjs routing based on their respective documentation examples
+- [ ] integrate some of my own new components and formhandling like react-ts-form
+- [ ] add docs or files for supporting local-docker setup for supabase, and try to keep it very optional
+- [ ] consider making a CLI for it, with Ink?
+- [ ] Always keep it 100% open-source
 
 ## Getting Started
 
@@ -9,8 +16,7 @@ Welcome to the gluestack-ui Starter Kit! This project is designed to help you ki
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/gluestack/gluestack-ui-starter-kits.git
-cd gluestack-ui-starter-kits
+git clone https://github.com/Seanmclem/supastack-rn-starter.git
 ```
 
 2. Install dependencies:
