@@ -4,8 +4,8 @@ I have forked the Gluestack starter-kit demo app, and plan to make my own modifi
 - [ ] update this started to use latest packages including expo beta, and nativewinds 4.1+, etc
 - [ ] add supabase with web/app specific configurations, based on supabase docs and public examples
 - [ ] secure expo and nexjs routing based on their respective documentation examples
-- [ ] integrate some of my own new components and formhandling like react-ts-form
-- [ ] add docs or files for supporting local-docker setup for supabase, and try to keep it very optional
+- [ ] integrate some of my own new components and form handling like react-ts-form
+- [ ] add docs or files for supporting local-docker setup for supabase, and try to keep it very optional. maybe using like local.env and cloud.env environment variables.
 - [ ] consider making a CLI for it, with Ink?
 - [ ] Always keep it 100% open-source
 
