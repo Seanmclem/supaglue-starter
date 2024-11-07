@@ -1,6 +1,6 @@
 # SupaGlue Starter?
 
-I plan to for the Gluestack starter-kit demo app, and make my own modifications. I will not be using any code from paid starters that I have bought. I will instead roll my own based on supabase and expo docs. I need
+I have forked the Gluestack starter-kit demo app, and plan to make my own modifications. I will not be using any code from paid starters that I have bought. I will instead roll my own based on supabase and expo docs. I need
 - [ ] update this started to use latest packages including expo beta, and nativewinds 4.1+, etc
 - [ ] add supabase with web/app specific configurations, based on supabase docs and public examples
 - [ ] secure expo and nexjs routing based on their respective documentation examples
