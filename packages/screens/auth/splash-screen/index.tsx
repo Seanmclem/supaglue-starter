@@ -1,6 +1,6 @@
-import { VStack } from "@/components/ui/vstack";
-import { Button, ButtonText } from "@/components/ui/button";
-import { Icon } from "@/components/ui/icon";
+import { VStack } from "@components/ui/vstack";
+import { Button, ButtonText } from "@components/ui/button";
+import { Icon } from "@components/ui/icon";
 import {
   GluestackIcon,
   GluestackIconDark,

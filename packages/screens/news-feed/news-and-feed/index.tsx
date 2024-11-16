@@ -1,35 +1,35 @@
-import { Box } from "@/components/ui/box";
-import { HStack } from "@/components/ui/hstack";
+import { Box } from "@components/ui/box";
+import { HStack } from "@components/ui/hstack";
 import {
   ChevronLeftIcon,
   DownloadIcon,
   Icon,
   MenuIcon,
   SearchIcon,
-} from "@/components/ui/icon";
+} from "@components/ui/icon";
 import { isWeb } from "@gluestack-ui/nativewind-utils/IsWeb";
-import { Text } from "@/components/ui/text";
-import { VStack } from "@/components/ui/vstack";
-import { Pressable } from "@/components/ui/pressable";
+import { Text } from "@components/ui/text";
+import { VStack } from "@components/ui/vstack";
+import { Pressable } from "@components/ui/pressable";
 import type { LucideIcon } from "lucide-react-native";
 import { FeedIcon } from "./assets/icons/feed";
 import { GlobeIcon } from "./assets/icons/globe";
-import { Button, ButtonIcon, ButtonText } from "@/components/ui/button";
+import { Button, ButtonIcon, ButtonText } from "@components/ui/button";
 import { useState } from "react";
-import { Heading } from "@/components/ui/heading";
+import { Heading } from "@components/ui/heading";
 import Image from "@unitools/image";
-import { ScrollView } from "@/components/ui/scroll-view";
-import { Input, InputField, InputIcon, InputSlot } from "@/components/ui/input";
+import { ScrollView } from "@components/ui/scroll-view";
+import { Input, InputField, InputIcon, InputSlot } from "@components/ui/input";
 import {
   Avatar,
   AvatarFallbackText,
   AvatarImage,
-} from "@/components/ui/avatar";
+} from "@components/ui/avatar";
 import useRouter from "@unitools/router";
 import { HomeIcon } from "./assets/icons/home";
 import { HeartIcon } from "./assets/icons/heart";
 import { ProfileIcon } from "./assets/icons/profile";
-import { SafeAreaView } from "@/components/ui/safe-area-view";
+import { SafeAreaView } from "@components/ui/safe-area-view";
 import { cn } from "@gluestack-ui/nativewind-utils/cn";
 import { Platform } from "react-native";
 type MobileHeaderProps = {
@@ -100,35 +100,35 @@ interface CreatorData {
 
 const WORLD_DATA: BlogData[] = [
   {
-    bannerUri: require("@/assets/news-feed/news-and-feed/image3.png"),
+    bannerUri: require("@assets/news-feed/news-and-feed/image3.png"),
     title: "The Power of Positive Thinking",
     description:
       "Discover how the power of positive thinking can transform your life, boost your confidence, and help you overcome challenges. Explore practical tips and techniques to cultivate a positive mindset for greater happiness and success.",
     publishedDate: "May 15, 2023",
   },
   {
-    bannerUri: require("@/assets/news-feed/news-and-feed/image4.png"),
+    bannerUri: require("@assets/news-feed/news-and-feed/image4.png"),
     title: "The Power of Positive Thinking",
     description:
       "Discover how the power of positive thinking can transform your life, boost your confidence, and help you overcome challenges. Explore practical tips and techniques to cultivate a positive mindset for greater happiness and success.",
     publishedDate: "May 15, 2023",
   },
   {
-    bannerUri: require("@/assets/news-feed/news-and-feed/image5.png"),
+    bannerUri: require("@assets/news-feed/news-and-feed/image5.png"),
     title: "The Power of Positive Thinking",
     description:
       "Discover how the power of positive thinking can transform your life, boost your confidence, and help you overcome challenges. Explore practical tips and techniques to cultivate a positive mindset for greater happiness and success.",
     publishedDate: "May 15, 2023",
   },
   {
-    bannerUri: require("@/assets/news-feed/news-and-feed/image3.png"),
+    bannerUri: require("@assets/news-feed/news-and-feed/image3.png"),
     title: "The Power of Positive Thinking",
     description:
       "Discover how the power of positive thinking can transform your life, boost your confidence, and help you overcome challenges. Explore practical tips and techniques to cultivate a positive mindset for greater happiness and success.",
     publishedDate: "May 15, 2023",
   },
   {
-    bannerUri: require("@/assets/news-feed/news-and-feed/image4.png"),
+    bannerUri: require("@assets/news-feed/news-and-feed/image4.png"),
     title: "The Power of Positive Thinking",
     description:
       "Discover how the power of positive thinking can transform your life, boost your confidence, and help you overcome challenges. Explore practical tips and techniques to cultivate a positive mindset for greater happiness and success.",
@@ -137,21 +137,21 @@ const WORLD_DATA: BlogData[] = [
 ];
 const BLOGS_DATA: BlogData[] = [
   {
-    bannerUri: require("@/assets/news-feed/news-and-feed/image.png"),
+    bannerUri: require("@assets/news-feed/news-and-feed/image.png"),
     title: "The Power of Positive Thinking",
     description:
       "Discover how the power of positive thinking can transform your life, boost your confidence, and help you overcome challenges. Explore practical tips and techniques to cultivate a positive mindset for greater happiness and success.",
     publishedDate: "May 15, 2023",
   },
   {
-    bannerUri: require("@/assets/news-feed/news-and-feed/image2.png"),
+    bannerUri: require("@assets/news-feed/news-and-feed/image2.png"),
     title: "The Power of Positive Thinking",
     description:
       "Discover how the power of positive thinking can transform your life, boost your confidence, and help you overcome challenges. Explore practical tips and techniques to cultivate a positive mindset for greater happiness and success.",
     publishedDate: "May 15, 2023",
   },
   {
-    bannerUri: require("@/assets/news-feed/news-and-feed/image2.png"),
+    bannerUri: require("@assets/news-feed/news-and-feed/image2.png"),
     title: "The Power of Positive Thinking",
     description:
       "Discover how the power of positive thinking can transform your life, boost your confidence, and help you overcome challenges. Explore practical tips and techniques to cultivate a positive mindset for greater happiness and success.",
@@ -160,17 +160,17 @@ const BLOGS_DATA: BlogData[] = [
 ];
 const CREATORS_DATA: CreatorData[] = [
   {
-    bannerUri: require("@/assets/news-feed/news-and-feed/image6.png"),
+    bannerUri: require("@assets/news-feed/news-and-feed/image6.png"),
     name: "Emily Zho",
     description: "Designer by heart, writer by profession, talks about design",
   },
   {
-    bannerUri: require("@/assets/news-feed/news-and-feed/image7.png"),
+    bannerUri: require("@assets/news-feed/news-and-feed/image7.png"),
     name: "Ram Narayan",
     description: "Founder of Fortune 500 company Alo, talks about",
   },
   {
-    bannerUri: require("@/assets/news-feed/news-and-feed/image8.png"),
+    bannerUri: require("@assets/news-feed/news-and-feed/image8.png"),
     name: "David John",
     description: "Creator of all things metal, talks about music and art. ",
   },

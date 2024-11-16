@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Toast, ToastTitle, useToast } from "@/components/ui/toast";
-import { HStack } from "@/components/ui/hstack";
-import { VStack } from "@/components/ui/vstack";
-import { Heading } from "@/components/ui/heading";
-import { Text } from "@/components/ui/text";
-import { LinkText } from "@/components/ui/link";
-import { Image } from "@/components/ui/image";
+import { Toast, ToastTitle, useToast } from "@components/ui/toast";
+import { HStack } from "@components/ui/hstack";
+import { VStack } from "@components/ui/vstack";
+import { Heading } from "@components/ui/heading";
+import { Text } from "@components/ui/text";
+import { LinkText } from "@components/ui/link";
+import { Image } from "@components/ui/image";
 import Link from "@unitools/link";
 import {
   FormControl,
@@ -14,30 +14,30 @@ import {
   FormControlErrorText,
   FormControlLabel,
   FormControlLabelText,
-} from "@/components/ui/form-control";
-import { Input, InputField, InputIcon, InputSlot } from "@/components/ui/input";
+} from "@components/ui/form-control";
+import { Input, InputField, InputIcon, InputSlot } from "@components/ui/input";
 import {
   Checkbox,
   CheckboxIcon,
   CheckboxIndicator,
   CheckboxLabel,
-} from "@/components/ui/checkbox";
+} from "@components/ui/checkbox";
 import {
   ArrowLeftIcon,
   CheckIcon,
   EyeIcon,
   EyeOffIcon,
   Icon,
-} from "@/components/ui/icon";
-import { Button, ButtonText, ButtonIcon } from "@/components/ui/button";
+} from "@components/ui/icon";
+import { Button, ButtonText, ButtonIcon } from "@components/ui/button";
 import { Keyboard } from "react-native";
-import { SafeAreaView } from "@/components/ui/safe-area-view";
+import { SafeAreaView } from "@components/ui/safe-area-view";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { AlertTriangle } from "lucide-react-native";
 import { GoogleIcon } from "./assets/icons/google";
-import { Pressable } from "@/components/ui/pressable";
+import { Pressable } from "@components/ui/pressable";
 import useRouter from "@unitools/router";
 const USERS = [
   {
@@ -67,12 +67,12 @@ const AuthLayout = (props) => {
           space="md"
         >
           <Image
-            source={require("@/assets/auth/radialGradient.png")}
+            source={require("@assets/auth/radialGradient.png")}
             className="h-full w-full absolute inset-0 -z-10"
             alt="Radial Gradient"
           />
           <Image
-            source={require("@/assets/auth/logo.png")}
+            source={require("@assets/auth/logo.png")}
             className="h-40 w-40"
             alt="Gluestack Logo"
           />

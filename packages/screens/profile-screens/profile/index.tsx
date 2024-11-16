@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
-import { Box } from "@/components/ui/box";
-import { HStack } from "@/components/ui/hstack";
+import { Box } from "@components/ui/box";
+import { HStack } from "@components/ui/hstack";
 import {
   AlertCircleIcon,
   ChevronDownIcon,
@@ -12,15 +12,15 @@ import {
   MenuIcon,
   PhoneIcon,
   SettingsIcon,
-} from "@/components/ui/icon";
-import { Text } from "@/components/ui/text";
-import { VStack } from "@/components/ui/vstack";
-import { Pressable } from "@/components/ui/pressable";
+} from "@components/ui/icon";
+import { Text } from "@components/ui/text";
+import { VStack } from "@components/ui/vstack";
+import { Pressable } from "@components/ui/pressable";
 import { AlertCircle, type LucideIcon } from "lucide-react-native";
-import { Button, ButtonIcon, ButtonText } from "@/components/ui/button";
-import { Heading } from "@/components/ui/heading";
+import { Button, ButtonIcon, ButtonText } from "@components/ui/button";
+import { Heading } from "@components/ui/heading";
 import Image from "@unitools/image";
-import { ScrollView } from "@/components/ui/scroll-view";
+import { ScrollView } from "@components/ui/scroll-view";
 import {
   Modal,
   ModalBackdrop,
@@ -28,18 +28,18 @@ import {
   ModalCloseButton,
   ModalContent,
   ModalHeader,
-} from "@/components/ui/modal";
-import { Input, InputField } from "@/components/ui/input";
+} from "@components/ui/modal";
+import { Input, InputField } from "@components/ui/input";
 import {
   Avatar,
   AvatarBadge,
   AvatarFallbackText,
   AvatarImage,
-} from "@/components/ui/avatar";
+} from "@components/ui/avatar";
 import useRouter from "@unitools/router";
 import { ProfileIcon } from "./assets/icons/profile";
-import { SafeAreaView } from "@/components/ui/safe-area-view";
-import { Center } from "@/components/ui/center";
+import { SafeAreaView } from "@components/ui/safe-area-view";
+import { Center } from "@components/ui/center";
 import { cn } from "@gluestack-ui/nativewind-utils/cn";
 import { Keyboard, Platform } from "react-native";
 import { SubscriptionIcon } from "./assets/icons/subscription";
@@ -50,7 +50,7 @@ import { HomeIcon } from "./assets/icons/home";
 import { GlobeIcon } from "./assets/icons/globe";
 import { InboxIcon } from "./assets/icons/inbox";
 import { HeartIcon } from "./assets/icons/heart";
-import { Divider } from "@/components/ui/divider";
+import { Divider } from "@components/ui/divider";
 import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -61,7 +61,7 @@ import {
   FormControlErrorText,
   FormControlLabel,
   FormControlLabelText,
-} from "@/components/ui/form-control";
+} from "@components/ui/form-control";
 import {
   Select,
   SelectBackdrop,
@@ -73,7 +73,7 @@ import {
   SelectItem,
   SelectPortal,
   SelectTrigger,
-} from "@/components/ui/select";
+} from "@components/ui/select";
 import { CameraSparklesIcon } from "./assets/icons/camera-sparkles";
 import { EditPhotoIcon } from "./assets/icons/edit-photo";
 import { isWeb } from "@gluestack-ui/nativewind-utils/IsWeb";
@@ -459,7 +459,7 @@ const MainContent = () => {
         <VStack className="h-full w-full pb-8" space="2xl">
           <Box className="relative w-full md:h-[478px] h-[380px]">
             <Image
-              source={require("@/assets/profile-screens/profile/image2.png")}
+              source={require("@assets/profile-screens/profile/image2.png")}
               height={"100%"}
               width={"100%"}
               alt="Banner Image"
@@ -476,7 +476,7 @@ const MainContent = () => {
             <VStack space="lg" className="items-center">
               <Avatar size="2xl" className="bg-primary-600">
                 <Image
-                  source={require("@/assets/profile-screens/profile/image.png")}
+                  source={require("@assets/profile-screens/profile/image.png")}
                   height={"100%"}
                   width={"100%"}
                   alt="Avatar Image"
@@ -555,7 +555,7 @@ const MainContent = () => {
               <HStack space="2xl" className="items-center">
                 <Box className="md:h-20 md:w-20 h-10 w-10">
                   <Image
-                    source={require("@/assets/profile-screens/profile/image1.png")}
+                    source={require("@assets/profile-screens/profile/image1.png")}
                     height={"100%"}
                     width={"100%"}
                     alt="Promo Image"
@@ -654,7 +654,7 @@ const MobileScreen = () => {
     <VStack className="md:hidden mb-5">
       <Box className="w-full h-[188px]">
         <Image
-          source={require("@/assets/profile-screens/profile/image2.png")}
+          source={require("@assets/profile-screens/profile/image2.png")}
           height={"100%"}
           width={"100%"}
           alt="Banner Image"
@@ -666,7 +666,7 @@ const MobileScreen = () => {
       <Center className="w-full absolute top-10">
         <Avatar size="2xl">
           <Image
-            source={require("@/assets/profile-screens/profile/image.png")}
+            source={require("@assets/profile-screens/profile/image.png")}
             height={"100%"}
             width={"100%"}
             alt="Avatar Image"
@@ -1103,7 +1103,7 @@ const ModalComponent = ({
       <ModalContent>
         <Box className={"w-full h-[215px] "}>
           <Image
-            source={require("@/assets/profile-screens/profile/image2.png")}
+            source={require("@assets/profile-screens/profile/image2.png")}
             height={"100%"}
             width={"100%"}
             alt="Banner Image"
@@ -1127,7 +1127,7 @@ const ModalComponent = ({
         <Center className="w-full absolute top-16">
           <Avatar size="2xl">
             <Image
-              source={require("@/assets/profile-screens/profile/image.png")}
+              source={require("@assets/profile-screens/profile/image.png")}
               height={"100%"}
               width={"100%"}
               alt="Avatar Image"

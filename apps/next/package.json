@@ -6,10 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "patch-package"
   },
   "dependencies": {
-    "@/components": "*",
+    "@components/ui": "*",
     "@gluestack-ui/nativewind-utils": "latest",
     "@gluestack-ui/overlay": "latest",
     "@gluestack-ui/toast": "latest",

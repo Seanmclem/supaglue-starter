@@ -1,5 +1,5 @@
 {
-  "name": "@/screens",
+  "name": "@repo/screens",
   "version": "0.0.0",
   "main": "index.js",
   "module": "index.js",
@@ -15,7 +15,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@/components": "*",
+    "@components/ui": "*",
     "@hookform/resolvers": "^3.3.4",
     "@unitools/image": "^0.0.4",
     "@unitools/link": "^0.0.3",

@@ -1,29 +1,29 @@
-import { Box } from "@/components/ui/box";
-import { HStack } from "@/components/ui/hstack";
+import { Box } from "@components/ui/box";
+import { HStack } from "@components/ui/hstack";
 import { isWeb } from "@gluestack-ui/nativewind-utils/IsWeb";
-import { ChevronLeftIcon, Icon, MenuIcon } from "@/components/ui/icon";
-import { Text } from "@/components/ui/text";
-import { VStack } from "@/components/ui/vstack";
-import { Pressable } from "@/components/ui/pressable";
+import { ChevronLeftIcon, Icon, MenuIcon } from "@components/ui/icon";
+import { Text } from "@components/ui/text";
+import { VStack } from "@components/ui/vstack";
+import { Pressable } from "@components/ui/pressable";
 import { InboxIcon } from "./assets/icons/inbox";
 import { GlobeIcon } from "./assets/icons/globe";
-import { Button, ButtonText } from "@/components/ui/button";
+import { Button, ButtonText } from "@components/ui/button";
 import { useState } from "react";
-import { Heading } from "@/components/ui/heading";
-import { ScrollView } from "@/components/ui/scroll-view";
-import { Divider } from "@/components/ui/divider";
-import { Grid, GridItem } from "@/components/ui/grid";
+import { Heading } from "@components/ui/heading";
+import { ScrollView } from "@components/ui/scroll-view";
+import { Divider } from "@components/ui/divider";
+import { Grid, GridItem } from "@components/ui/grid";
 import {
   Avatar,
   AvatarFallbackText,
   AvatarImage,
-} from "@/components/ui/avatar";
+} from "@components/ui/avatar";
 import useRouter from "@unitools/router";
 import { HomeIcon } from "./assets/icons/home";
 import { HeartIcon } from "./assets/icons/heart";
 import { ProfileIcon } from "./assets/icons/profile";
 import { CalendarIcon } from "./assets/icons/calendar";
-import { SafeAreaView } from "@/components/ui/safe-area-view";
+import { SafeAreaView } from "@components/ui/safe-area-view";
 import { cn } from "@gluestack-ui/nativewind-utils/cn";
 import { Platform } from "react-native";
 import Image from "@unitools/image";
@@ -65,27 +65,27 @@ const bottomTabsList = [
 ];
 const HeadingCards = [
   {
-    bannerUri: require("@/assets/dashboard/dashboard-layout/image.png"),
+    bannerUri: require("@assets/dashboard/dashboard-layout/image.png"),
     title: "Update your profile",
     description: "Add your details",
   },
   {
-    bannerUri: require("@/assets/dashboard/dashboard-layout/image2.png"),
+    bannerUri: require("@assets/dashboard/dashboard-layout/image2.png"),
     title: "Your skills",
     description: "Add your skills here",
   },
   {
-    bannerUri: require("@/assets/dashboard/dashboard-layout/image3.png"),
+    bannerUri: require("@assets/dashboard/dashboard-layout/image3.png"),
     title: "Your goals",
     description: "Set a target to accomplish",
   },
   {
-    bannerUri: require("@/assets/dashboard/dashboard-layout/image3.png"),
+    bannerUri: require("@assets/dashboard/dashboard-layout/image3.png"),
     title: "Your goals",
     description: "Set a target to accomplish",
   },
   {
-    bannerUri: require("@/assets/dashboard/dashboard-layout/image3.png"),
+    bannerUri: require("@assets/dashboard/dashboard-layout/image3.png"),
     title: "Your goals",
     description: "Set a target to accomplish",
   },
@@ -140,22 +140,22 @@ const LeavesCards = [
 ];
 const ColleaguesCards = [
   {
-    image: require("@/assets/dashboard/dashboard-layout/image7.png"),
+    image: require("@assets/dashboard/dashboard-layout/image7.png"),
     title: "Emily Zho",
     position: "UI/UX Designer",
   },
   {
-    image: require("@/assets/dashboard/dashboard-layout/image4.png"),
+    image: require("@assets/dashboard/dashboard-layout/image4.png"),
     title: "Marilyn Monroe",
     position: "SDE II",
   },
   {
-    image: require("@/assets/dashboard/dashboard-layout/image5.png"),
+    image: require("@assets/dashboard/dashboard-layout/image5.png"),
     title: "James Kant",
     position: "SDE III",
   },
   {
-    image: require("@/assets/dashboard/dashboard-layout/image6.png"),
+    image: require("@assets/dashboard/dashboard-layout/image6.png"),
     title: "Richard Faynmen",
     position: "CEO Marketing",
   },

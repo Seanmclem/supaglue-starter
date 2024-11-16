@@ -19,7 +19,11 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/assets/*": ["../../packages/shared/assets/*", "./public/assets/*"],
+      "@assets/*": ["../../packages/shared/assets/*", "./public/assets/*"],
+      "@components/*": ["../../packages/components/*"],
+      "@hooks/*": ["../../packages/hooks/*"],
+      "@screens/*": ["../../packages/screens/*"],
+      "@shared/*": ["../../packages/shared/*"],
       "@/*": ["./*"]
     },
     "jsxImportSource": "nativewind"
