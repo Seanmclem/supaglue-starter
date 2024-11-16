@@ -3,7 +3,10 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "lib": ["DOM", "ESNext"],
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
     "jsx": "react-native",
     "moduleResolution": "node",
     "allowJs": true,
@@ -16,12 +19,25 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@assets/*": ["../../packages/shared/assets/*", "./assets/*"],
-      "@components/*": ["../../packages/components/*"],
-      "@hooks/*": ["../../packages/hooks/*"],
-      "@screens/*": ["../../packages/screens/*"],
-      "@shared/*": ["../../packages/shared/*"],
-      "@/*": ["./*"]
+      "@assets/*": [
+        "../../packages/shared/assets/*",
+        "./assets/*"
+      ],
+      "@components/*": [
+        "../../packages/components/*"
+      ],
+      "@hooks/*": [
+        "../../packages/hooks/*"
+      ],
+      "@screens/*": [
+        "../../packages/screens/*"
+      ],
+      "@shared/*": [
+        "../../packages/shared/*"
+      ],
+      "@/*": [
+        "./*"
+      ]
     },
     "types": [
       "react",
@@ -34,12 +50,14 @@
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "expo-env.d.ts",
+    "nativewind-env.d.ts"
   ],
   "exclude": [
     "node_modules",
     "babel.config.js",
     "metro.config.js",
     "jest.config.js"
-  ]
+  ],
+  "extends": "expo/tsconfig.base"
 }
