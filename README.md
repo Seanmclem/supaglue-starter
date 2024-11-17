@@ -25,7 +25,7 @@
 - [ ] add supabase functions.
   - https://supabase.com/docs/guides/functions/quickstart
   - https://supabase.com/docs/guides/functions/local-development
-- [ ] add docker
+- [ ] add docker (OPTIONAL)
   - https://supabase.com/docs/guides/self-hosting/docker
 
 I have forked the Gluestack starter-kit demo app, and plan to make my own modifications. I will not be using any code from paid starters that I have bought. I will instead roll my own based on supabase and expo docs. I need
