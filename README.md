@@ -17,6 +17,7 @@
 - [ ] add supabase
   - https://supabase.com/docs/guides/auth/quickstarts/react-native
   - https://supabase.com/docs/guides/getting-started/tutorials/with-expo-react-native?queryGroups=auth-store&auth-store=secure-store
+  - https://docs.expo.dev/guides/environment-variables/
 - [ ] use expo-router for web, if at all, don't bother with next-js thingadoo
 - [ ] add auth routing and secure pages
   - https://docs.expo.dev/router/reference/authentication/
