@@ -5,6 +5,10 @@ import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { Text } from "react-native";
+import { Button, ButtonIcon, ButtonSpinner, ButtonText } from "@/components/ui/button";
+import colors from 'tailwindcss/colors';
+import { Box } from "@/components/ui/box";
+import { AddIcon, InfoIcon } from "@/components/ui/icon";
 
 export default function HomeScreen() {
   return (
@@ -18,7 +22,25 @@ export default function HomeScreen() {
       }
     >
       <ThemedView style={styles.titleContainer}>
-        <Text className="text-red-600 text-3xl">Welcome!</Text>
+
+        <Box className="flex flex-column gap-2 w-full">
+          <Button>
+          <ButtonIcon as={InfoIcon} className='mr-2'/>
+            <ButtonText>Left Icon</ButtonText>
+          </Button>
+          <Button variant="solid" className='mt-2'>
+          <ButtonText>Right Icon</ButtonText>
+            <ButtonIcon as={AddIcon} className='ml-2'/>
+          </Button>
+          <Text className="text-red-600 text-3xl">Welcome!</Text>
+          <Button className="p-3 px-5 h-max">
+          {/* colors is imported from tailwindcss/colors */}
+          <ButtonSpinner color={colors.gray[400]} />
+          <ButtonText className="font-medium text-lg ml-2">Please wait...</ButtonText>
+        </Button>
+        </Box>
+      
+
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
