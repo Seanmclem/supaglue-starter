@@ -7,8 +7,13 @@
 - [x] add nativewind 4.1+
   - https://www.nativewind.dev/getting-started/expo-router
   - https://www.nativewind.dev/getting-started/typescript
-- [ ] add gluestack ui? Maybe, yes
+- [x] add gluestack ui? Maybe, yes
   - https://gluestack.io/ui/docs/home/getting-started/installation
+  - [ ] add more/all components
+  - [ ] ensure open-starter colors etc are brought
+  - [ ] open-starter forms and page components, later with supabase in.
+  - [ ] profile and similar routes
+- [x] works with expo-web/RNW so far
 - [ ] add supabase
   - https://supabase.com/docs/guides/auth/quickstarts/react-native
   - https://supabase.com/docs/guides/getting-started/tutorials/with-expo-react-native?queryGroups=auth-store&auth-store=secure-store
