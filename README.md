@@ -4,8 +4,9 @@
 
 - [x] init nex expo project, 52 beta
   - https://expo.dev/changelog/2024/10-24-sdk-52-beta#how-to-try-out-the-beta-release
-- [ ] add nativewind 4.1+
+- [x] add nativewind 4.1+
   - https://www.nativewind.dev/getting-started/expo-router
+  - https://www.nativewind.dev/getting-started/typescript
 - [ ] add gluestack ui? Maybe, yes
   - https://gluestack.io/ui/docs/home/getting-started/installation
 - [ ] add supabase
