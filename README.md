@@ -27,6 +27,7 @@
   - https://supabase.com/docs/guides/functions/quickstart
   - https://supabase.com/docs/guides/functions/local-development
 - [ ] add docker (OPTIONAL)
+  - For now, can re-use existing docker instance for local https://github.com/supabase/supabase/discussions/5968#discussioncomment-9059734
   - https://supabase.com/docs/guides/self-hosting/docker
 
 I have forked the Gluestack starter-kit demo app, and plan to make my own modifications. I will not be using any code from paid starters that I have bought. I will instead roll my own based on supabase and expo docs. I need
