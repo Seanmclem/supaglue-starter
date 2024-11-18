@@ -18,6 +18,7 @@
   - https://supabase.com/docs/guides/auth/quickstarts/react-native
   - https://supabase.com/docs/guides/getting-started/tutorials/with-expo-react-native?queryGroups=auth-store&auth-store=secure-store
   - https://docs.expo.dev/guides/environment-variables/
+  - async storage web thing LATER. https://github.com/react-native-async-storage/async-storage/issues/1096#issuecomment-2469585716
 - [ ] use expo-router for web, if at all, don't bother with next-js thingadoo
   -  No need for patches then, i think. 
 - [ ] add auth routing and secure pages
