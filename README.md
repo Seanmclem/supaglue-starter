@@ -1,6 +1,6 @@
 # SupaGlue Starter?
 
-## OK JK I'm nuking this and starting fresh. Clean slate.
+## Clean slate.
 
 - [x] init nex expo project, 52 beta
   - https://expo.dev/changelog/2024/10-24-sdk-52-beta#how-to-try-out-the-beta-release
