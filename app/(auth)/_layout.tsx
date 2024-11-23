@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import { ActivityIndicator, AppState, View } from 'react-native';
 import { supabase } from '@/lib/supabase';
 import { useAuthStore } from '@/hooks/stores/useAuthStore';
+import { Text } from 'react-native';
+import { Tabs, TabList, TabTrigger, TabSlot } from 'expo-router/ui';
 
 AppState.addEventListener('change', (state) => {
   if (state === 'active') {
@@ -39,5 +41,15 @@ export default function TabLayout() {
     return <Redirect href="/sign-in" />;
   }
 
-  return <Stack />;
+  return <Tabs>
+  <TabSlot />
+  <TabList className=' bg-yellow-500 ' style={{ justifyContent: 'space-around', height: 80 }}>
+    <TabTrigger name="home" href="/" className='bg-green-500 items-center p-5'>
+      <Text>Home</Text>
+    </TabTrigger>
+    <TabTrigger className='bg-blue-500 items-center p-5' name="article" href="/article">
+        <Text>Article</Text>
+      </TabTrigger>
+    </TabList>
+  </Tabs>
 }

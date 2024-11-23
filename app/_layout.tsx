@@ -46,11 +46,7 @@ export default function RootLayout() {
           <Slot />
         {/* </SessionProvider> */}
       </ThemeProvider>
-      {/* <Stack>
-          <Stack.Screen name="(authed)" options={{ headerShown: false }} />
-          <Stack.Screen name="+not-found" />
-        </Stack>
-        <StatusBar style="auto" /> */}
+
       {/* </ThemeProvider> */}
     </GluestackUIProvider>
   );
