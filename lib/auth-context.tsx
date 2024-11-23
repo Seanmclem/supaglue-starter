@@ -1,19 +1,19 @@
 import { useContext, createContext, type PropsWithChildren } from 'react';
-import { useStorageState } from './useStorageState';
+import { useAuthStore } from '@/hooks/stores/useAuthStore';
+import { Session } from '@supabase/supabase-js';
 
 const AuthContext = createContext<{
-  signIn: () => void;
-  signOut: () => void;
-  session?: string | null;
+  signIn: (email: string, password: string) => Promise<void>;
+  signOut: () => Promise<void>;
+  session: Session | null;
   isLoading: boolean;
 }>({
-  signIn: () => null,
-  signOut: () => null,
+  signIn: async () => {},
+  signOut: async () => {},
   session: null,
   isLoading: false,
 });
 
-// This hook can be used to access the user info.
 export function useSession() {
   const value = useContext(AuthContext);
   if (process.env.NODE_ENV !== 'production') {
@@ -21,23 +21,17 @@ export function useSession() {
       throw new Error('useSession must be wrapped in a <SessionProvider />');
     }
   }
-
   return value;
 }
 
 export function SessionProvider({ children }: PropsWithChildren) {
-  const [[isLoading, session], setSession] = useStorageState('session');
+  const { signInWithEmail, signOut, session, isLoading } = useAuthStore();
 
   return (
     <AuthContext.Provider
       value={{
-        signIn: () => {
-          // Perform sign-in logic here
-          setSession('xxx');
-        },
-        signOut: () => {
-          setSession(null);
-        },
+        signIn: signInWithEmail,
+        signOut,
         session,
         isLoading,
       }}>

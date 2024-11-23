@@ -15,7 +15,7 @@ import "react-native-reanimated";
 // import { useColorScheme } from "@/hooks/useColorScheme";
 
 import "../global.css";
-import { SessionProvider } from "@/lib/auth-context";
+import { useColorScheme } from "react-native";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -25,6 +25,9 @@ export default function RootLayout() {
   const [loaded] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
+
+  const colorScheme = useColorScheme();
+
 
   useEffect(() => {
     if (loaded) {
@@ -37,12 +40,13 @@ export default function RootLayout() {
   }
 
   return (
-    <GluestackUIProvider mode="light">
-      {/* <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}> */}
-      <SessionProvider>
-        <Slot />
-      </SessionProvider>
-        {/* <Stack>
+    <GluestackUIProvider mode={(colorScheme ?? "light") as "light" | "dark"}>
+    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+        {/* <SessionProvider> */}
+          <Slot />
+        {/* </SessionProvider> */}
+      </ThemeProvider>
+      {/* <Stack>
           <Stack.Screen name="(authed)" options={{ headerShown: false }} />
           <Stack.Screen name="+not-found" />
         </Stack>
