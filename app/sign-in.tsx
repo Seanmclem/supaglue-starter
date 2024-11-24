@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Toast, ToastTitle, useToast } from "@/components/ui/toast";
 import { HStack } from "@/components/ui/hstack";
 import { VStack } from "@/components/ui/vstack";
@@ -39,6 +39,7 @@ import { Pressable } from "@/components/ui/pressable";
 import { Link, Redirect, useRouter } from "expo-router";
 import { AuthContainer } from "@/components/AuthContainer";
 import { useAuthStore } from '@/hooks/stores/useAuthStore';
+import { humanizeAuthError } from '@/lib/utils/humanizeAuthError';
 // import { AuthLayout } from "../layout";
 
 const USERS = [
@@ -74,12 +75,29 @@ const  LoginWithLeftBackground = () => {
     resolver: zodResolver(loginSchema),
   });
   const toast = useToast();
+
   const [validated, setValidated] = useState({
     emailValid: true,
     passwordValid: true,
   });
 
-  const { signUpOrIn, isLoading, session } = useAuthStore();
+  const { signUpOrIn, isLoading, session, error } = useAuthStore();
+
+  useEffect(() => {
+    if (error && error !== 'error') {
+      console.log('~error', error);
+      toast.show({
+        placement: "top",
+        render: ({ id }) => {
+          return (
+            <Toast nativeID={id} action="error" variant="solid">
+              <ToastTitle>Login failed: {humanizeAuthError(error)}</ToastTitle>
+            </Toast>
+          );
+        },
+      });
+    }
+  }, [error]);
 
   const onSubmit = async (data: LoginSchemaType) => {
     try {

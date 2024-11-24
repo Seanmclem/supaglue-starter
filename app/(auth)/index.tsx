@@ -1,29 +1,16 @@
-import { Text, View } from 'react-native';
+import React from 'react';
+import { View, Text } from 'react-native';
 import { useAuthStore } from '@/hooks/stores/useAuthStore';
-import { Box } from '@/components/ui/box';
-import { Button, ButtonIcon, ButtonSpinner, ButtonText } from '@/components/ui/button';
-import { ArrowLeftIcon } from '@/components/ui/icon';
 
-export default function SignOut() {
-  const { signOut, isLoading } = useAuthStore();
+export default function ArticleView() {
+  const { session } = useAuthStore();
+
   return (
-    <View className="flex-1 items-center justify-center">
-      <Box className="flex flex-column gap-4 w-3/4">
-        <Text className="text-3xl font-medium text-center">Sign Out</Text>
-        <Button
-          size="lg"
-          variant="solid"
-          onPress={() => {
-            signOut();
-            // layout observing session, will redirect to sign-in
-          }}
-        >
-          <ButtonText className="font-medium">Sign Out</ButtonText>
-          {isLoading ? (
-            <ButtonSpinner />
-          ) : <ButtonIcon as={ArrowLeftIcon} className="ml-2" />}
-        </Button>
-      </Box>
+    <View className="flex-1 bg-red-500">
+      <Text className="text-2xl font-bold mb-4">Home</Text>
+      <Text className="text-gray-600">
+        Welcome HOME.
+      </Text>
     </View>
   );
 } 

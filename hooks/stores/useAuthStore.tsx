@@ -14,7 +14,7 @@ interface AuthState {
   signUpOrIn: (email: string, password: string) => Promise<void>;
   signOut: () => Promise<void>;
   
-  // Loading state actions
+  // Loading state actions, provides setters to other components
   setLoading: (isLoading: boolean) => void;
   setError: (error: string | null) => void;
 }
@@ -27,51 +27,33 @@ export const useAuthStore = create<AuthState>((set) => ({
 
   signUpOrIn: async (email: string, password: string) => {
     try {
+      // New sign up or sign in, blank state
       set({ isLoading: true, error: null });
       
+      // Try to sign up
       const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
         email,
         password,
       });
 
-      console.log('Sign up attempt:', signUpError ? 'Failed' : 'Success', signUpData);
-
-      // Check if email confirmation is needed
-      if (signUpData.user && !signUpData.session) {
-        console.log('Sign up failed, email confirmation needed');
-        set({ 
-          error: 'Please check your email for verification link',
-          session: null 
-        });
-        return;
-      }
-
       // If sign up fails because user exists, try to sign in
-      if (signUpError && signUpError.message.includes('already registered')) {
+      if (signUpError?.message.includes('already registered')) {
         const { data: signInData, error: signInError } = await supabase.auth.signInWithPassword({
           email,
           password,
         });
 
-        console.log('Sign in attempt:', signInError ? 'Failed' : 'Success', signInData);
-
         if (signInError) throw signInError;
 
-        // Check if email confirmation is needed for sign in
-        if (signInData.user && !signInData.session) {
-          console.log('Sign in failed, email confirmation needed');
-          set({ 
-            error: 'Please check your email for verification link',
-            session: null 
-          });
-          return;
-        }
-
+        // If sign in succeeded, set session
         set({ session: signInData.session }); 
         return;
       }
 
-      // If sign up succeeded
+      // If sign up fails because for any other reason, throw error
+      if (!signUpError?.message.includes('already registered')) throw signUpError;
+
+      // If sign up succeeded, set session
       if (signUpData.session) {
         set({ session: signUpData.session });
       } else {
@@ -87,6 +69,7 @@ export const useAuthStore = create<AuthState>((set) => ({
 
   signInWithEmail: async (email: string, password: string) => {
     try {
+      // New sign in, blank state
       set({ isLoading: true, error: null });
       
       const { data, error } = await supabase.auth.signInWithPassword({
@@ -125,6 +108,7 @@ export const useAuthStore = create<AuthState>((set) => ({
     }
   },
 
+  // provider setters to other components
   setLoading: (isLoading: boolean) => set({ isLoading }),
   setError: (error: string | null) => set({ error }),
 }));
